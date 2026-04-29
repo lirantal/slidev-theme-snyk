@@ -6,6 +6,7 @@ defineProps<{
 
 <template>
   <div class="slidev-layout cover" :class="$attrs.class">
+    <div class="cover-bg" />
     <div class="cover-content">
       <slot />
     </div>
@@ -16,6 +17,15 @@ defineProps<{
 </template>
 
 <style scoped>
+.cover-bg {
+  position: absolute;
+  inset: 0;
+  background: url('/bg-dots-gradient.png') no-repeat center center;
+  background-size: cover;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
 .cover-content {
   flex: 1;
   display: flex;
@@ -31,6 +41,7 @@ defineProps<{
   left: 50%;
   transform: translateX(-50%);
   opacity: 0.25;
+  z-index: 1;
 }
 
 .cover-logo {

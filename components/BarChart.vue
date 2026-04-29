@@ -24,7 +24,7 @@ withDefaults(defineProps<{
           class="bar-fill"
           :style="{
             width: `${(item.value / (maxValue || Math.max(...data.map(d => d.value)))) * 100}%`,
-            background: item.color || 'linear-gradient(90deg, var(--snyk-primary), var(--snyk-accent-teal))',
+            background: item.color || 'linear-gradient(90deg, var(--snyk-action), var(--snyk-action-secondary))',
           }"
         />
       </div>

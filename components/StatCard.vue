@@ -33,7 +33,7 @@ withDefaults(defineProps<{
 }
 
 .stat-purple {
-  background: linear-gradient(135deg, var(--snyk-primary-light), var(--snyk-accent-teal));
+  background: linear-gradient(135deg, var(--snyk-action), var(--snyk-action-secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

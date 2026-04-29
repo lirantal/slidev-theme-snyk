@@ -1,19 +1,22 @@
 :root {
-  --snyk-bg-dark: #0D0B1A;
-  --snyk-bg-surface: #161228;
-  --snyk-bg-accent: #1E1740;
-  --snyk-bg-card: #1A1530;
-  --snyk-primary: #6A5ACD;
-  --snyk-primary-light: #8B7CF7;
-  --snyk-primary-dim: #4A3FA0;
-  --snyk-accent-teal: #00D4AA;
-  --snyk-accent-blue: #10B2F3;
+  --snyk-bg-dark: #000000;
+  --snyk-bg-surface: #0A0A0F;
+  --snyk-bg-accent: #141419;
+  --snyk-bg-card: #0E0E14;
+  --snyk-primary: #FF0FF3;
+  --snyk-primary-light: #FF5AF6;
+  --snyk-primary-dim: #CC0CC2;
+  --snyk-action: #FF0FF3;
+  --snyk-action-secondary: #FF8904;
+  --snyk-glow-blue: #00BCFF;
+  --snyk-accent-teal: #00BCFF;
+  --snyk-accent-blue: #00BCFF;
   --snyk-text: #FFFFFF;
-  --snyk-text-secondary: #A8A3C0;
-  --snyk-text-muted: #6B6588;
-  --snyk-border: #2A2445;
-  --snyk-border-light: #3A3460;
-  --snyk-glow: rgba(106, 90, 205, 0.15);
+  --snyk-text-secondary: #B0AEBD;
+  --snyk-text-muted: #6E6C7A;
+  --snyk-border: #1E1E28;
+  --snyk-border-light: #2E2E3A;
+  --snyk-glow: rgba(255, 15, 243, 0.1);
 
   --slidev-theme-primary: var(--snyk-primary);
 }
@@ -22,6 +25,8 @@
 
 .slidev-layout {
   background-color: var(--snyk-bg-dark);
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 24px 24px;
   color: var(--snyk-text);
   padding: 2.5rem 3rem;
   font-family: 'Nunito Sans', sans-serif;
@@ -78,14 +83,14 @@
 }
 
 .slidev-layout a {
-  color: var(--snyk-primary-light);
+  color: var(--snyk-glow-blue);
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: border-color 0.2s ease;
 }
 
 .slidev-layout a:hover {
-  border-bottom-color: var(--snyk-primary-light);
+  border-bottom-color: var(--snyk-glow-blue);
 }
 
 .slidev-layout ul,
@@ -100,16 +105,17 @@
 }
 
 .slidev-layout li::marker {
-  color: var(--snyk-primary);
+  color: var(--snyk-action-secondary);
 }
 
 .slidev-layout code:not(pre code) {
   background: var(--snyk-bg-accent);
-  color: var(--snyk-accent-teal);
+  color: var(--snyk-glow-blue);
   padding: 0.15em 0.4em;
   border-radius: 4px;
   font-size: 0.9em;
   font-family: 'JetBrains Mono', monospace;
+  border: 1px solid var(--snyk-border);
 }
 
 .slidev-layout pre {
@@ -132,9 +138,7 @@
 .slidev-layout.cover {
   @apply h-full flex flex-col items-center justify-center text-center;
   background: var(--snyk-bg-dark);
-  background-image:
-    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(106, 90, 205, 0.12) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 40% at 80% 100%, rgba(0, 212, 170, 0.06) 0%, transparent 50%);
+  background-image: none;
   position: relative;
 }
 
@@ -181,9 +185,9 @@
 .slidev-layout.section {
   @apply h-full flex flex-col justify-center;
   background: var(--snyk-bg-dark);
-  background-image:
-    radial-gradient(ellipse 50% 50% at 0% 50%, rgba(106, 90, 205, 0.08) 0%, transparent 60%);
+  background-image: none;
   padding-left: 4rem;
+  position: relative;
 }
 
 .slidev-layout.section h1 {
@@ -200,7 +204,7 @@
   left: 0;
   width: 80px;
   height: 3px;
-  background: linear-gradient(90deg, var(--snyk-primary), var(--snyk-accent-teal));
+  background: linear-gradient(90deg, var(--snyk-action), var(--snyk-action-secondary));
   border-radius: 2px;
 }
 
@@ -270,12 +274,13 @@
 .slidev-layout.image-full {
   @apply h-full relative;
   padding: 0;
+  background-image: none;
 }
 
 .slidev-layout.image-full .image-full-overlay {
   @apply absolute inset-0 flex flex-col justify-end;
   padding: 3rem;
-  background: linear-gradient(to top, rgba(13, 11, 26, 0.9) 0%, transparent 60%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.92) 0%, transparent 60%);
 }
 
 /* ─── Quote Layout ─── */
@@ -294,7 +299,7 @@
   font-size: 8rem;
   font-family: 'Sora', sans-serif;
   color: var(--snyk-primary);
-  opacity: 0.15;
+  opacity: 0.12;
   line-height: 1;
 }
 
@@ -315,7 +320,7 @@
 .slidev-layout.fact h1 {
   font-size: 5rem;
   letter-spacing: -0.05em;
-  background: linear-gradient(135deg, var(--snyk-primary-light), var(--snyk-accent-teal));
+  background: linear-gradient(135deg, var(--snyk-action), var(--snyk-action-secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -332,8 +337,8 @@
 .slidev-layout.end {
   @apply h-full flex flex-col items-center justify-center text-center;
   background: var(--snyk-bg-dark);
-  background-image:
-    radial-gradient(ellipse 80% 60% at 50% 100%, rgba(106, 90, 205, 0.1) 0%, transparent 60%);
+  background-image: none;
+  position: relative;
 }
 
 .slidev-layout.end h1 {
@@ -345,6 +350,7 @@
 .slidev-layout.full {
   @apply h-full;
   padding: 0;
+  background-image: none;
 }
 
 /* ─── Transitions ─── */
@@ -386,14 +392,14 @@
 /* ─── Utility Classes ─── */
 
 .gradient-text {
-  background: linear-gradient(135deg, var(--snyk-primary-light), var(--snyk-accent-teal));
+  background: linear-gradient(135deg, var(--snyk-action), var(--snyk-action-secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .gradient-text-purple {
-  background: linear-gradient(135deg, var(--snyk-primary), var(--snyk-primary-light));
+  background: linear-gradient(135deg, var(--snyk-glow-blue), var(--snyk-action));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -414,7 +420,7 @@
 }
 
 .glass-card {
-  background: rgba(22, 18, 40, 0.6);
+  background: rgba(10, 10, 15, 0.6);
   backdrop-filter: blur(12px);
   border: 1px solid var(--snyk-border);
   border-radius: 12px;
@@ -433,15 +439,15 @@
 }
 
 .snyk-badge-primary {
-  background: rgba(106, 90, 205, 0.15);
+  background: rgba(255, 15, 243, 0.1);
   color: var(--snyk-primary-light);
-  border: 1px solid rgba(106, 90, 205, 0.3);
+  border: 1px solid rgba(255, 15, 243, 0.25);
 }
 
 .snyk-badge-teal {
-  background: rgba(0, 212, 170, 0.12);
-  color: var(--snyk-accent-teal);
-  border: 1px solid rgba(0, 212, 170, 0.25);
+  background: rgba(0, 188, 255, 0.1);
+  color: var(--snyk-glow-blue);
+  border: 1px solid rgba(0, 188, 255, 0.2);
 }
 
 .snyk-badge-danger {
@@ -460,47 +466,48 @@
 .snyk-glow-line {
   width: 80px;
   height: 3px;
-  background: linear-gradient(90deg, var(--snyk-primary), var(--snyk-accent-teal));
+  background: linear-gradient(90deg, var(--snyk-action), var(--snyk-action-secondary));
   border-radius: 2px;
 }
 
 /* ─── Light Mode ─── */
 
 html:not(.dark) .slidev-layout {
-  background-color: #FAFAFE;
-  color: #1A1530;
+  background-color: #FAFAFA;
+  color: #141419;
 }
 
 html:not(.dark) .slidev-layout h1,
 html:not(.dark) .slidev-layout h2,
 html:not(.dark) .slidev-layout strong {
-  color: #1A1530;
+  color: #141419;
 }
 
 html:not(.dark) .slidev-layout h3,
 html:not(.dark) .slidev-layout h4 {
-  color: #4A4560;
+  color: #4A4A55;
 }
 
 html:not(.dark) .slidev-layout p,
 html:not(.dark) .slidev-layout li {
-  color: #4A4560;
+  color: #4A4A55;
 }
 
 html:not(.dark) .slidev-layout code:not(pre code) {
-  background: #EEECF5;
+  background: #F0EFF4;
   color: var(--snyk-primary-dim);
+  border-color: #E0DFE5;
 }
 
 html:not(.dark) .slidev-layout pre {
-  background: #F4F2FA !important;
-  border-color: #E0DDE8;
+  background: #F5F4F8 !important;
+  border-color: #E0DFE5;
 }
 
 html:not(.dark) .slidev-layout.cover,
 html:not(.dark) .slidev-layout.section,
 html:not(.dark) .slidev-layout.end {
-  background-color: #1A1530;
+  background-color: #000000;
   color: #FFFFFF;
 }
 
@@ -515,10 +522,10 @@ html:not(.dark) .slidev-layout.end p {
 
 html:not(.dark) .glow-card {
   background: #FFFFFF;
-  border-color: #E0DDE8;
+  border-color: #E0DFE5;
 }
 
 html:not(.dark) .glass-card {
   background: rgba(255, 255, 255, 0.7);
-  border-color: #E0DDE8;
+  border-color: #E0DFE5;
 }

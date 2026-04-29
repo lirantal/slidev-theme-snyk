@@ -3,8 +3,8 @@ withDefaults(defineProps<{
   from?: string
   to?: string
 }>(), {
-  from: 'var(--snyk-primary-light)',
-  to: 'var(--snyk-accent-teal)',
+  from: 'var(--snyk-action)',
+  to: 'var(--snyk-action-secondary)',
 })
 </script>
 

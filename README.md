@@ -70,22 +70,34 @@ fonts:
 
 ## Color Palette
 
-All colors are exposed as CSS custom properties on `:root` and can be overridden in scoped `<style>` blocks:
+Colors follow the **Snyk Evo** brand identity — true black backgrounds with vibrant pink-to-orange and blue-to-pink gradients. All colors are exposed as CSS custom properties on `:root`:
 
 | Variable | Default | Usage |
 |----------|---------|-------|
-| `--snyk-bg-dark` | `#0D0B1A` | Primary slide background |
-| `--snyk-bg-surface` | `#161228` | Cards, panels |
-| `--snyk-bg-accent` | `#1E1740` | Highlighted sections |
-| `--snyk-bg-card` | `#1A1530` | Card interiors |
-| `--snyk-primary` | `#6A5ACD` | Brand purple, accents |
-| `--snyk-primary-light` | `#8B7CF7` | Lighter purple |
-| `--snyk-accent-teal` | `#00D4AA` | Teal accent (data, badges) |
-| `--snyk-accent-blue` | `#10B2F3` | Blue accent |
+| `--snyk-bg-dark` | `#000000` | Primary slide background |
+| `--snyk-bg-surface` | `#0A0A0F` | Cards, code blocks |
+| `--snyk-bg-accent` | `#141419` | Highlighted sections |
+| `--snyk-bg-card` | `#0E0E14` | Card interiors |
+| `--snyk-primary` | `#FF0FF3` | Brand pink, accents |
+| `--snyk-primary-light` | `#FF5AF6` | Lighter pink |
+| `--snyk-action` | `#FF0FF3` | Gradient start (pink) |
+| `--snyk-action-secondary` | `#FF8904` | Gradient end (orange) |
+| `--snyk-glow-blue` | `#00BCFF` | Blue glow accent |
 | `--snyk-text` | `#FFFFFF` | Headings, key text |
-| `--snyk-text-secondary` | `#A8A3C0` | Body text |
-| `--snyk-text-muted` | `#6B6588` | Captions, footnotes |
-| `--snyk-border` | `#2A2445` | Borders, dividers |
+| `--snyk-text-secondary` | `#B0AEBD` | Body text |
+| `--snyk-text-muted` | `#6E6C7A` | Captions, footnotes |
+| `--snyk-border` | `#1E1E28` | Borders, dividers |
+
+### Gradients
+
+The theme uses two key gradients matching the Evo website:
+
+- **Action gradient** (pink → orange): `linear-gradient(90deg, var(--snyk-action), var(--snyk-action-secondary))`
+- **Glow gradient** (blue → pink): `linear-gradient(to left, var(--snyk-glow-blue), var(--snyk-action))`
+
+### Background pattern
+
+All content slides feature a subtle dot-grid pattern. Cover, section, and end layouts use the branded dotted wave background images instead.
 
 Light mode is supported — cover, section, and end layouts stay dark while content slides switch to a light palette.
 

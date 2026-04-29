@@ -33,8 +33,6 @@ layout: default
 
 # Agenda
 
-<v-clicks>
-
 - **The Problem** — Why agent tool supply chains are a new attack surface
 - **Introducing Agent Scan** — What it does and how it works
 - **Key Capabilities** — Inventory, risk analysis, enterprise rollout
@@ -42,8 +40,6 @@ layout: default
 - **How It Works** — CLI, CI/CD, pre-commit integration
 - **Built for Your Team** — Security, platform, and developer use cases
 - **Getting Started** — Try it today
-
-</v-clicks>
 
 ---
 layout: intro
@@ -125,14 +121,10 @@ layout: default
 
 Agent skills may pull code, prompts, or external dependencies from unknown sources. Without analysis, it's hard to know whether a tool is safe to run.
 
-<v-clicks>
-
 - Skills can execute arbitrary code on developer machines
 - Prompt definitions can contain hidden injection payloads
 - Dependencies are pulled from unverified third-party registries
 - No equivalent of `npm audit` or `snyk test` existed — until now
-
-</v-clicks>
 
 ---
 layout: default
@@ -198,14 +190,10 @@ layout: default
 
 AI-native developers install MCP servers and agent skills without security review, creating shadow AI across your developer fleet. Agent Scan discovers every AI component.
 
-<v-clicks>
-
 - **Detect** every MCP server and agent skill installed
 - **Verify** each component comes from an official, trusted source
 - **Detect** components installed outside your approved gateway
 - **Flag** components outside your approved allowlist automatically
-
-</v-clicks>
 
 ---
 layout: default
@@ -219,14 +207,10 @@ Not all agent tools are created equal. Agent Scan verifies the provenance of eve
 
 <div>
 
-<v-clicks>
-
 - **Registry verification** — Is this from an official package registry?
 - **Author trust** — Is the publisher a known, verified entity?
 - **Version pinning** — Are there unexpected version changes?
 - **Signature checks** — Is the component signed and verifiable?
-
-</v-clicks>
 
 </div>
 
@@ -302,14 +286,10 @@ layout: default
 
 ### Malware Detection
 
-<v-clicks>
-
 - Obfuscated code execution patterns
 - Network calls to unknown endpoints
 - File system access outside expected scope
 - Encoded payloads in tool definitions
-
-</v-clicks>
 
 </div>
 
@@ -317,14 +297,10 @@ layout: default
 
 ### Credential Exposure
 
-<v-clicks>
-
 - API keys hardcoded in skill definitions
 - AWS/GCP/Azure tokens in configuration
 - Database connection strings
 - PII embedded in prompt templates
-
-</v-clicks>
 
 </div>
 
@@ -448,15 +424,11 @@ layout: default
 
 Deploy Agent Scan org-wide through IT-managed distribution. Whether you're securing 17 machines or 17,000.
 
-<v-clicks>
-
 - **Distribute** via IT tooling to all developer endpoints
 - **Schedule** recurring scans with no manual triggers required
 - **Track** scan success and failures in real time
 - **Monitor** scanner version consistency across the fleet
 - **Set** approval status per component and track it across the fleet
-
-</v-clicks>
 
 ---
 layout: two-cols
@@ -466,14 +438,10 @@ layout: two-cols
 
 Gain centralized visibility into your agent tools and their associated risks across the organization.
 
-<v-clicks>
-
 - Real-time scan status dashboard
 - Component allowlist management
 - Risk trend monitoring
 - Compliance reporting
-
-</v-clicks>
 
 ::right::
 
@@ -635,15 +603,11 @@ layout: default
 
 Roll out agentic tools to increase developer productivity, without creating a security bottleneck or leaving your stack ungoverned.
 
-<v-clicks>
-
 - **Managed Distribution** — Deploy scanner via IT tooling across endpoints
 - **Automated Scanning** — Scheduled scans without manual triggers
 - **Centralized Config** — Org-wide allowlists and policy definitions
 - **Integration Ready** — Hooks into existing SIEM, SOAR, and GRC tools
 - **Version Management** — Track scanner consistency across the fleet
-
-</v-clicks>
 
 ---
 layout: default
@@ -659,14 +623,10 @@ Build and ship agents with a secure supply chain — without exposing your own m
 
 ### Workflow Integration
 
-<v-clicks>
-
 - Scan before installing new skills
 - Pre-commit hooks catch issues early
 - CI pipeline gates prevent risky deployments
 - Browser-based skill inspection
-
-</v-clicks>
 
 </div>
 
@@ -674,14 +634,10 @@ Build and ship agents with a secure supply chain — without exposing your own m
 
 ### Developer Experience
 
-<v-clicks>
-
 - Single command — no config needed
 - Fast scans — seconds, not minutes
 - Clear, actionable results
 - No disruption to existing workflows
-
-</v-clicks>
 
 </div>
 
@@ -695,16 +651,12 @@ layout: two-cols
 
 <div class="text-sm mt-4">
 
-<v-clicks>
-
 - ❌ No visibility into installed agent tools
 - ❌ Manual security review (if any)
 - ❌ No policy enforcement
 - ❌ Shadow AI across developer fleet
 - ❌ Compliance gaps in AI governance
 - ❌ Reactive incident response
-
-</v-clicks>
 
 </div>
 
@@ -714,16 +666,12 @@ layout: two-cols
 
 <div class="text-sm mt-4">
 
-<v-clicks>
-
 - ✅ Complete inventory of all agent tools
 - ✅ Automated risk analysis
 - ✅ Centralized policy enforcement
 - ✅ Full fleet visibility
 - ✅ Audit-ready compliance reporting
 - ✅ Proactive threat prevention
-
-</v-clicks>
 
 </div>
 
@@ -808,15 +756,11 @@ Already a Snyk customer? Join the Evo Agent Scan Design Partner program for earl
 
 ### What you get
 
-<v-clicks>
-
 - Early access to enterprise features
 - Direct input into the product roadmap
 - Priority support from the Evo team
 - Fleet management capabilities
 - Custom policy engine access
-
-</v-clicks>
 
 </div>
 

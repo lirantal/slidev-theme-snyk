@@ -1,5 +1,6 @@
 <template>
   <div class="slidev-layout end">
+    <div class="end-bg" />
     <div class="end-content">
       <slot />
     </div>
@@ -10,6 +11,15 @@
 </template>
 
 <style scoped>
+.end-bg {
+  position: absolute;
+  inset: 0;
+  background: url('/bg-dots-gradient.png') no-repeat center center;
+  background-size: cover;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
 .end-content {
   z-index: 1;
 }
@@ -20,6 +30,7 @@
   left: 50%;
   transform: translateX(-50%);
   opacity: 0.2;
+  z-index: 1;
 }
 
 .end-logo-img {
