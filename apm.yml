@@ -1,0 +1,14 @@
+name: slidev-theme-snyk
+version: 1.0.0
+description: APM project for slidev-theme-snyk
+author: Liran Tal
+dependencies:
+  apm:
+  - antfu/skills/skills/slidev
+  - antfu/skills/skills/vite
+  - antfu/skills/skills/vue-best-practices
+  - antfu/skills/skills/vue
+  - anthropics/skills/skills/frontend-design
+  mcp: []
+includes: auto
+scripts: {}

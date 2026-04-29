@@ -1,0 +1,49 @@
+lockfile_version: '1'
+generated_at: '2026-04-27T13:14:44.368371+00:00'
+apm_version: 0.9.4
+dependencies:
+- repo_url: antfu/skills
+  host: github.com
+  resolved_commit: c35a5588a5158b5b404a14fb10469b2b6dc1952b
+  virtual_path: skills/slidev
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .cursor/skills/slidev
+  content_hash: sha256:3ab76faf7c9e152fc2e0ebf5d905e02a16e562fef03df3deb5b48d6a08bed8f5
+- repo_url: antfu/skills
+  host: github.com
+  resolved_commit: c35a5588a5158b5b404a14fb10469b2b6dc1952b
+  virtual_path: skills/vite
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .cursor/skills/vite
+  content_hash: sha256:7a96b654c210b97a50498495ebbb69f6f3c4a7dc9e403ad8e89efa17c25e8825
+- repo_url: antfu/skills
+  host: github.com
+  resolved_commit: c35a5588a5158b5b404a14fb10469b2b6dc1952b
+  virtual_path: skills/vue
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .cursor/skills/vue
+  content_hash: sha256:64c5282303420a497eab1347e97845ec772ccdcac56104cbe1e0d35a1db6ce79
+- repo_url: antfu/skills
+  host: github.com
+  resolved_commit: c35a5588a5158b5b404a14fb10469b2b6dc1952b
+  virtual_path: skills/vue-best-practices
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .cursor/skills/vue-best-practices
+  content_hash: sha256:66bf09d99563e5ae1c695c8b0fb48ad9a9c061a25439803e1a326ad04bed2251
+- repo_url: anthropics/skills
+  host: github.com
+  resolved_commit: 5128e1865d670f5d6c9cef000e6dfc4e951fb5b9
+  virtual_path: skills/frontend-design
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .cursor/skills/frontend-design
+  content_hash: sha256:063a0e6448123cd359ad0044cc46b0e490cc7964d45ef4bb9fd842bd2ffbca67
