@@ -1,9 +1,13 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import { useNav } from '@slidev/client'
+import configs from '#slidev/configs'
 
 const { currentLayout, currentPage, total } = useNav()
 
 const hiddenLayouts = ['cover', 'cover-alt', 'end', 'full']
+
+const showSlideNumbers = computed(() => configs.themeConfig?.slideNumbers === true)
 </script>
 
 <template>
@@ -11,7 +15,7 @@ const hiddenLayouts = ['cover', 'cover-alt', 'end', 'full']
     <div class="footer-left">
       <img src="/snyk-logo-dark.png" alt="Snyk" class="footer-logo" />
     </div>
-    <div class="footer-right">
+    <div v-if="showSlideNumbers" class="footer-right">
       {{ currentPage }} / {{ total }}
     </div>
   </footer>
