@@ -15,6 +15,8 @@
   background-size: 50% auto;
   opacity: 0.25;
   pointer-events: none;
+  -webkit-mask-image: radial-gradient(ellipse 50% 60% at 90% 85%, black 20%, transparent 70%);
+  mask-image: radial-gradient(ellipse 50% 60% at 90% 85%, black 20%, transparent 70%);
 }
 
 .section-content {
