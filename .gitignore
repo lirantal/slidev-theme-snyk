@@ -6,3 +6,7 @@ dist
 .remote-assets
 .idea/
 components.d.ts
+
+
+# APM dependencies
+apm_modules/
