@@ -33,7 +33,9 @@ Configure the theme via `themeConfig` in your headmatter (first frontmatter bloc
 theme: snyk
 colorSchema: dark
 themeConfig:
-  slideNumbers: true   # Show slide numbers in footer (default: false)
+  handle: "@yourhandle"       # Your social handle shown in footer
+  slideNumbers: true          # Show slide numbers in footer (default: false)
+  footerBranding: handle      # 'handle' or 'logo' (default: auto)
 ---
 ```
 
@@ -41,7 +43,9 @@ themeConfig:
 
 | Option | Type | Default | Description |
 |--------|------|---------|-------------|
+| `handle` | `string` | — | Your social/account tag (e.g. `@lirantal`). Shown in the footer by default when set. |
 | `slideNumbers` | `boolean` | `false` | Show page numbers in the bottom-right footer |
+| `footerBranding` | `'handle' \| 'logo'` | auto | What to show in the bottom-left footer. Defaults to `handle` if one is set, otherwise shows the Snyk logo. |
 
 ## Fonts
 

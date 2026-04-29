@@ -10,6 +10,8 @@ fonts:
   mono: JetBrains Mono
 defaults:
   transition: snyk-fade
+themeConfig:
+  handle: "@lirantal"
 ---
 
 ---

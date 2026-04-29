@@ -8,12 +8,22 @@ const { currentLayout, currentPage, total } = useNav()
 const hiddenLayouts = ['cover', 'cover-alt', 'end', 'full']
 
 const showSlideNumbers = computed(() => configs.themeConfig?.slideNumbers === true)
+
+const handle = computed(() => configs.themeConfig?.handle as string | undefined)
+
+const footerBranding = computed(() => {
+  const explicit = configs.themeConfig?.footerBranding as string | undefined
+  if (explicit === 'logo') return 'logo'
+  if (explicit === 'handle') return handle.value ? 'handle' : 'logo'
+  return handle.value ? 'handle' : 'logo'
+})
 </script>
 
 <template>
   <footer v-if="!hiddenLayouts.includes(currentLayout)" class="snyk-footer">
     <div class="footer-left">
-      <img src="/snyk-logo-dark.png" alt="Snyk" class="footer-logo" />
+      <span v-if="footerBranding === 'handle' && handle" class="footer-handle">{{ handle }}</span>
+      <img v-else src="/snyk-logo-dark.png" alt="Snyk" class="footer-logo" />
     </div>
     <div v-if="showSlideNumbers" class="footer-right">
       {{ currentPage }} / {{ total }}
@@ -45,6 +55,12 @@ const showSlideNumbers = computed(() => configs.themeConfig?.slideNumbers === tr
 .footer-logo {
   height: 16px;
   width: auto;
+}
+
+.footer-handle {
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
 }
 
 .footer-right {
