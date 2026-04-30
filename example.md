@@ -1,6 +1,11 @@
 ---
 theme: ./
 title: "Evo Agent Scan: Securing the Agentic Tool Supply Chain"
+coverTitle: |
+  Secure the Agentic Tool
+  Supply Chain
+subtitle: AI-native developers are installing MCP servers and agent skills at speed, often without security review. It's time to change that.
+conference: Snyk Live Security Summit
 author: Liran Tal
 transition: snyk-fade
 colorSchema: dark
@@ -17,15 +22,6 @@ themeConfig:
 ---
 layout: cover
 ---
-
-# Secure the Agentic Tool <br/> <GradientText>Supply Chain</GradientText>
-
-AI-native developers are installing MCP servers and agent skills at speed, often without security review. It's time to change that.
-
-<div class="mt-8">
-  <Badge variant="teal">Evo by Snyk</Badge>
-  <Badge variant="primary" class="ml-2">Agent Scan</Badge>
-</div>
 
 ---
 layout: default
