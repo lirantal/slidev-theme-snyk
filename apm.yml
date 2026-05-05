@@ -9,6 +9,7 @@ dependencies:
   - antfu/skills/skills/vue-best-practices
   - antfu/skills/skills/vue
   - anthropics/skills/skills/frontend-design
+  - lirantal/skill-creator-extra
   mcp: []
 includes: auto
 scripts: {}
