@@ -24,8 +24,8 @@ coverTitleScale: 95
 themeConfig:
   handle: "@lirantal"
   github: "@lirantal"
-  x: "@lirantal"
-  website: "snyk.io/articles"
+  x: "@liran_tal"
+  #website: "snyk.io/articles"
 ---
 
 <!--
