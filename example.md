@@ -23,6 +23,9 @@ layout: cover
 coverTitleScale: 95
 themeConfig:
   handle: "@lirantal"
+  github: "@lirantal"
+  x: "@lirantal"
+  website: "snyk.io/articles"
 ---
 
 <!--
@@ -40,12 +43,6 @@ avatar: https://github.com/lirantal.png
 **Developer Advocate & Security Researcher at Snyk**
 
 Author of supply chain security research on AI agent ecosystems. Previously disclosed malicious campaigns in npm, and now tracking the same patterns in Agent Skills.
-
-<div class="mt-4 flex gap-4 text-sm" style="color: var(--snyk-text-muted)">
-  <span>GitHub: @lirantal</span>
-  <span>X: @lirantal</span>
-  <span>snyk.io/articles</span>
-</div>
 
 <!--
 [0:30 - 1:00] Brief intro. Don't linger.

@@ -1,8 +1,17 @@
 <script setup lang="ts">
+import { computed } from 'vue'
+import configs from '#slidev/configs'
+
 defineProps<{
   avatar?: string
   class?: string
 }>()
+
+const tc = computed(() => (configs as any).themeConfig ?? {})
+const github = computed(() => tc.value.github ?? '')
+const x = computed(() => tc.value.x ?? tc.value.twitter ?? '')
+const website = computed(() => tc.value.website ?? '')
+const hasSocials = computed(() => github.value || x.value || website.value)
 </script>
 
 <template>
@@ -12,6 +21,11 @@ defineProps<{
     </div>
     <div class="intro-content">
       <slot />
+      <div v-if="hasSocials" class="intro-socials">
+        <span v-if="github">GitHub: {{ github }}</span>
+        <span v-if="x">X: {{ x }}</span>
+        <span v-if="website">{{ website }}</span>
+      </div>
     </div>
   </div>
 </template>
@@ -32,5 +46,13 @@ defineProps<{
 
 .intro-content {
   flex: 1;
+}
+
+.intro-socials {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  font-size: 0.875rem;
+  color: var(--snyk-text-muted);
 }
 </style>
