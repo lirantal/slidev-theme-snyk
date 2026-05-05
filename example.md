@@ -19,12 +19,10 @@ fonts:
 defaults:
   transition: snyk-fade
 conference: AI DevCon 2026
+layout: cover
+coverTitleScale: 95
 themeConfig:
   handle: "@lirantal"
----
-
----
-layout: cover
 ---
 
 <!--

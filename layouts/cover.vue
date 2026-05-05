@@ -1,10 +1,16 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, inject } from 'vue'
+import type { InjectionKey } from 'vue'
 import configs from '#slidev/configs'
 
 defineProps<{
   class?: string
 }>()
+
+const frontmatter = inject(
+  '$$slidev-fontmatter' as unknown as InjectionKey<Record<string, any>>,
+  {} as Record<string, any>,
+)
 
 function asMetaString(value: unknown): string {
   if (typeof value === 'string')
@@ -47,6 +53,14 @@ const coverSubtitle = computed(() =>
 )
 
 const showCoverHeading = computed(() => coverHeadline.value || coverSubtitle.value)
+
+const titleScale = computed(() => {
+  const raw = frontmatter.coverTitleScale
+    ?? (configs as Record<string, unknown>).coverTitleScale
+  const n = Number(raw)
+  if (!n || n <= 0) return 1
+  return n / 100
+})
 </script>
 
 <template>
@@ -54,7 +68,7 @@ const showCoverHeading = computed(() => coverHeadline.value || coverSubtitle.val
     <div class="cover-bg" />
     <div class="cover-content">
       <header v-if="showCoverHeading" class="cover-heading">
-        <h1 v-if="coverHeadline" class="cover-title">
+        <h1 v-if="coverHeadline" class="cover-title" :style="{ fontSize: `${3.5 * titleScale}rem` }">
           <GradientText>{{ coverHeadline }}</GradientText>
         </h1>
         <p v-if="coverSubtitle" class="cover-subtitle">{{ coverSubtitle }}</p>
