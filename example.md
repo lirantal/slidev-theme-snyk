@@ -8,7 +8,7 @@ abstract: |
 coverTitle: |
   Your AI Agent Installed Malware
   Because a SKILL.md Told It To
-subtitle: how attackers weaponize the agents own reasoning before pulling the trigger
+subtitle: weaponizing AI agents reasoning before pulling the trigger
 author: Liran Tal
 transition: snyk-fade
 colorSchema: dark
@@ -18,6 +18,7 @@ fonts:
   mono: JetBrains Mono
 defaults:
   transition: snyk-fade
+conference: AI DevCon 2026
 themeConfig:
   handle: "@lirantal"
 ---
