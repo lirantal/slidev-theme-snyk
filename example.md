@@ -105,12 +105,38 @@ This is a SKILL.md. YAML frontmatter at the top — name, description. Then Mark
 -->
 
 ---
+layout: default
+---
+
+# We Were Robbed of Skill Security
+
+<div class="mt-6">
+
+- Everyone runs in <strong>auto-mode</strong> (and <span style="color: var(--snyk-primary)">--yolo</span>)
+- <em>Do you even read skills text before you install them?</em>
+- Where is the agent <strong>sandbox</strong>?
+- Who checks what a skill <em>actually</em> does?
+
+</div>
+
+<!--
+[2:00 - 2:30] Raise questions.
+
+Highlight collective complacency. Most users install skills without reading. There’s no sandbox — everything runs with full agent permissions. Where's the security process?
+
+Before you blame the registry, check your own habits: Are you reviewing skills before hitting install? Is your agent running with fewer privileges? Or is it simply "trust and hope nothing bad happens"?
+-->
+
+
+---
 layout: quote
 ---
 
-Treat third-party skills as trusted code. Read them before enabling.
+Treat third-party skills as trusted code.
 
-<div class="mt-6" style="font-style: normal">
+Read them before enabling.
+
+<div class="mt-26" style="font-style: normal">
   <strong style="color: var(--snyk-text)">AgentSkills Official Documentation</strong>
   <div class="text-sm" style="color: var(--snyk-text-muted)">The only security guidance provided to users</div>
 </div>
@@ -137,41 +163,66 @@ To understand why this matters, let's talk about what these agents actually are.
 layout: default
 ---
 
-# Meet OpenClaw: "Everything Siri Was Supposed to Be"
+# What Do You Call Software That...
 
-An open-source AI assistant that lives on your machine. It connects to WhatsApp, Telegram, Slack. It reads your emails, manages your calendar, executes shell commands, controls your browser, and **remembers everything**.
+<div class="mt-8">
 
-<div class="grid grid-cols-2 gap-6 mt-6">
-
-<div>
-
-### The Architecture
-
-- **Gateway** — Central orchestration (WebSocket + HTTP)
-- **Skills** — Modular capabilities from ClawHub registry
-- **Channels** — WhatsApp, Slack, Telegram, Discord bridges
-- **Tools** — Shell, filesystem, browser, APIs
-
-</div>
-
-<div>
-
-### The Access Level
-
-- Full shell access to your machine
-- Read/write to all your files
-- Send messages on your behalf
-- Access environment variables & credentials
-- Persistent memory across sessions
-
-</div>
+- Accepts instructions via **Telegram**
+- Has **full control and access** to your machine
 
 </div>
 
 <!--
-[3:10 - 4:30] Paint the picture.
+[3:10 - 3:50] Build tension. Pause between each click.
 
-OpenClaw — formerly Clawdbot — is the poster child for this new wave. People are running entire companies through it. Developers building websites from their phones while putting babies to sleep. It's genuinely useful — but it operates at what its own docs call 'spicy' levels of access. Shell, email, files, messaging — everything. And it extends via Skills from a public registry called ClawHub.
+What do you call software that accepts instructions via Telegram... has full shell access... reads your emails... controls your browser... and installs third-party plugins to extend itself? Sounds like something you'd find in a threat intel report, right?
+-->
+
+---
+layout: center
+---
+
+# <span style="text-decoration: line-through; opacity: 0.7">A Trojan</span> OpenClaw
+
+<!--
+[3:50 - 4:20] The reveal. Let it land.
+
+A trojan? No — it's OpenClaw. Formerly Clawdbot. It's a legitimate, popular, open-source AI assistant. People love it. But look at those capabilities we just listed — every single one of them is a feature, not a bug. And every single one is an attack surface.
+-->
+
+---
+layout: default
+---
+
+# OpenClaw
+
+<div class="mt-6 text-lg" style="color: var(--snyk-text-secondary)">
+Open-source AI assistant lives on your machine and uses <strong>Skills</strong> from a public registry called <strong>ClawHub</strong>
+
+</div>
+
+<div class="mt-8 grid grid-cols-3 gap-4">
+  <FeatureCard
+    icon="🧩"
+    title="Skills"
+    description="Third-party capability plugins from a public registry. No review, no signing."
+  />
+  <FeatureCard
+    icon="🔑"
+    title="Full Permissions"
+    description="Every skill inherits the agent's shell, filesystem, network, and messaging access."
+  />
+  <FeatureCard
+    icon="💀"
+    title="One Bad Skill"
+    description="A single compromised skill = total control over the agent and everything it touches."
+  />
+</div>
+
+<!--
+[4:20 - 4:50] Drive the point.
+
+And here's the kicker: it extends itself through Skills from a public registry. Every skill inherits the full permissions of the agent. One compromised skill and you've handed the keys to everything — shell, files, email, browser, memory.
 -->
 
 ---
