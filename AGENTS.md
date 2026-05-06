@@ -77,6 +77,27 @@ Layout components are **providers** of the slide context, not consumers. This me
 
 In Vue `<template>`, computed refs auto-unwrap — use `myComputed` not `myComputed.value`. Using `.value` in a template evaluates to `undefined` and silently fails (e.g. an inline style binding produces `NaN` and the browser ignores it).
 
+### Styling text size in slide Markdown content
+
+Tailwind/UnoCSS utility classes like `text-2xl`, `text-4xl` on a `<div>` often have **no visible effect** on text inside Slidev slides. Two reasons:
+
+1. **Markdown inside `<div>` renders as child `<p>` elements.** The theme's `.slidev-layout p` rule sets a fixed `font-size` that overrides the parent div's inherited size.
+2. **UnoCSS classes may lose specificity** against the theme's scoped CSS rules in `styles/layout.css`.
+
+**Solution:** Use inline `style="font-size: ..."` directly on the element that contains the text — either write raw HTML (`<h2>`, `<p>`) with inline styles, or use Slidev's `<style>` block with scoped overrides. Do not rely on a parent div's font-size cascading into Markdown-generated children.
+
+```md
+<!-- BAD: div font-size won't reach the <p> inside -->
+<div style="font-size: 2.5rem">
+
+Some **markdown** text
+
+</div>
+
+<!-- GOOD: style on the actual rendered element -->
+<h2 style="font-size: 2.5rem">Some <strong>markdown</strong> text</h2>
+```
+
 ### Testing layout changes
 
 After any change to a layout `.vue` file, **always verify** it still renders:

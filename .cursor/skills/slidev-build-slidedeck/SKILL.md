@@ -152,6 +152,50 @@ Open-source AI assistant that uses **Skills** from a public registry
 <FeatureCard icon="💀" title="One Bad Skill"
   description="Total control over the agent and everything it touches." />
 ```
+
+#### Decompose lists into slide sequences
+
+When you have a list of N related items (3 threat categories, 4 steps, 5 principles), do NOT dump them into one bullet-point slide. Instead, decompose into a sequence:
+
+1. **Overview slide** — show the list as a visual summary (numbered cards, a simple grid). No details, just labels. This sets up "here are N things, let me walk you through each."
+2. **One slide per item** — each gets its own centered slide with a breadcrumb (e.g. "Lethal Trifecta — 1 of 3"), a title, a short subtitle, and empty space for a visual or screenshot. The speaker notes carry the full explanation.
+3. **Synthesis slide** (optional) — a punchline that ties them together after the walkthrough.
+
+Bad (everything on one slide):
+```md
+# The Lethal Trifecta
+
+- **Access to private data** — credentials, emails, files, API keys, environment variables — all in the agent's reach
+- **Exposure to untrusted content** — emails, web pages, chat messages, documents — all flow through the agent's context window
+- **Ability to communicate externally** — send emails, post to webhooks, make API calls, compose messages on your behalf
+
+Now add persistent memory and shell access — compromised agents become persistent insider threats.
+```
+
+Good (overview + 3 deep-dive slides):
+```md
+<!-- Overview: visual summary with numbered cards -->
+# The Lethal Trifecta
+
+[1: Private data] [2: Untrusted content] [3: External comms]
+```
+Then one slide per item:
+```md
+<!-- Breadcrumb keeps the audience oriented -->
+Lethal Trifecta — 1 of 3
+# Access to Private Data
+Credentials, emails, files, API keys — all in the agent's reach
+
+<!-- space for screenshot or visual below -->
+```
+Then the synthesis:
+```md
+Now add **persistent memory** and **shell access**
+
+Compromised agents become persistent insider threats
+```
+
+This pattern works for any enumerated concept: attack stages, architecture layers, defense strategies, research findings. The number in the breadcrumb gives the audience a progress indicator and the speaker room to tell each story fully.
  
 ---
  

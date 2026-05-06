@@ -225,41 +225,136 @@ Open-source AI assistant lives on your machine and uses <strong>Skills</strong> 
 And here's the kicker: it extends itself through Skills from a public registry. Every skill inherits the full permissions of the agent. One compromised skill and you've handed the keys to everything — shell, files, email, browser, memory.
 -->
 
+
 ---
-layout: default
+layout: section
 ---
 
-# The "Lethal Trifecta"
+# What Makes AI Agents <GradientText>Dangerous?</GradientText>
 
-Security researcher Simon Willison identified three capabilities that, combined, make AI agents uniquely dangerous. Snyk's research calls these **"toxic flows"**.
+<!--
+[4:30 - 4:40] Section reset.
 
-<div class="grid grid-cols-3 gap-4 mt-8">
-  <FeatureCard
-    icon="🔑"
-    title="Access to Private Data"
-    description="Credentials, emails, files, API keys, environment variables — all in the agent's reach"
-  />
-  <FeatureCard
-    icon="📨"
-    title="Exposure to Untrusted Content"
-    description="Emails, web pages, chat messages, documents — all flow through the agent's context window"
-  />
-  <FeatureCard
-    icon="📡"
-    title="Ability to Communicate Externally"
-    description="Send emails, post to webhooks, make API calls, compose messages on your behalf"
-  />
+We've seen what OpenClaw can do. Now let's talk about why this class of software is uniquely dangerous — not just OpenClaw, but any agent with these capabilities.
+-->
+
+---
+layout: center
+---
+
+# The Lethal Trifecta
+
+<!--
+[4:40 - 4:50] Drop the term.
+
+Simon Willison coined this term — the lethal trifecta. Three capabilities that, when combined, make AI agents a category-defining security risk. Snyk's research team calls the resulting exploit chains 'toxic flows.'
+-->
+
+---
+layout: center
+---
+
+<div class="text-center">
+
+# The Lethal Trifecta
+
+<div class="mt-8 inline-flex gap-8">
+  <div class="glow-card px-6 py-4 text-center">
+    <div class="text-3xl font-bold" style="font-family: Sora; color: var(--snyk-primary-light)">1</div>
+    <div class="text-sm mt-1">Private data</div>
+  </div>
+  <div class="glow-card px-6 py-4 text-center">
+    <div class="text-3xl font-bold" style="font-family: Sora; color: var(--snyk-primary-light)">2</div>
+    <div class="text-sm mt-1">Untrusted content</div>
+  </div>
+  <div class="glow-card px-6 py-4 text-center">
+    <div class="text-3xl font-bold" style="font-family: Sora; color: var(--snyk-primary-light)">3</div>
+    <div class="text-sm mt-1">External comms</div>
+  </div>
 </div>
 
-<div class="mt-6 text-center text-sm" style="color: var(--snyk-text-muted)">
-  Now add <strong>persistent memory</strong> and <strong>shell access</strong> — compromised agents become persistent insider threats capable of autonomous action.
 </div>
 
 <!--
-[4:30 - 5:30] This is the conceptual foundation.
+[4:50 - 5:10] Overview of the three.
 
-Simon Willison calls this the lethal trifecta. Your agent has access to secrets, it reads untrusted content, and it can communicate externally. Any TWO of these is concerning. All three together? That's an exfiltration machine waiting to be activated. And skills are the activation mechanism.
+Three capabilities. Any two are concerning. All three together? That's an exfiltration machine waiting to be activated. Let's look at each one.
 -->
+
+---
+layout: center
+---
+
+<div class="text-center max-w-2xl mx-auto">
+<p style="font-size: 0.9rem; color: var(--snyk-text-muted); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.5rem">Lethal Trifecta — 1 of 3</p>
+<h2 style="font-size: 2rem">Access to Private Data</h2>
+<p style="font-size: 1.1rem; color: var(--snyk-text-secondary); margin-top: 1rem">Credentials, emails, files, API keys, env vars — all in the agent's reach</p>
+</div>
+
+<div class="mt-8 flex justify-center">
+<!-- space for screenshot or visual -->
+</div>
+
+<!--
+[5:10 - 5:25] First leg.
+
+Your agent has access to everything you do. SSH keys, AWS credentials, OAuth tokens, .env files. It reads them because it needs to — that's the feature. But every secret it can read is a secret it can leak.
+-->
+
+---
+layout: center
+---
+
+<div class="text-center max-w-2xl mx-auto">
+<p style="font-size: 0.9rem; color: var(--snyk-text-muted); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.5rem">Lethal Trifecta — 2 of 3</p>
+<h2 style="font-size: 2rem">Exposure to Untrusted Content</h2>
+<p style="font-size: 1.1rem; color: var(--snyk-text-secondary); margin-top: 1rem">Emails, web pages, chat messages — all flow through the context window</p>
+</div>
+
+<div class="mt-8 flex justify-center">
+<!-- space for screenshot or visual -->
+</div>
+
+<!--
+[5:25 - 5:40] Second leg.
+
+Every email, every Slack message, every web page the agent reads becomes part of its context. Untrusted content mixing with trusted instructions. That's where prompt injection lives — in the gap between data and commands.
+-->
+
+---
+layout: center
+---
+
+<div class="text-center max-w-2xl mx-auto">
+<p style="font-size: 0.9rem; color: var(--snyk-text-muted); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.5rem">Lethal Trifecta — 3 of 3</p>
+<h2 style="font-size: 2rem">Ability to Communicate Externally</h2>
+<p style="font-size: 1.1rem; color: var(--snyk-text-secondary); margin-top: 1rem">Send emails, post to webhooks, compose messages on your behalf</p>
+</div>
+
+<div class="mt-8 flex justify-center">
+<!-- space for screenshot or visual -->
+</div>
+
+<!--
+[5:40 - 5:55] Third leg — the exfiltration channel.
+
+And here's the exit door. The agent can send emails, hit webhooks, post to APIs. The exfiltration channel isn't some clever exploit — it's the agent's own communication features. Combine all three and you get what Snyk calls a toxic flow: read secrets, get poisoned, send them out.
+-->
+
+---
+layout: center
+---
+
+<h2 style="font-size: 1.5rem; color: var(--snyk-text-secondary)">Now add <strong>persistent memory</strong> and <strong>shell access</strong></h2>
+
+<p style="font-size: 1.5rem; margin-top: 1.5rem;">Compromised agents become persistent insider threats</p>
+
+<!--
+[5:30 - 5:50] Let it sink in.
+
+And it gets worse. These agents remember things across sessions. A compromised skill can plant instructions in memory that fire days later. Add shell access and you have a persistent insider threat — autonomous, patient, and invisible to traditional security tools. This is what we documented in the ToxicSkills research.
+-->
+
 
 ---
 layout: fact
