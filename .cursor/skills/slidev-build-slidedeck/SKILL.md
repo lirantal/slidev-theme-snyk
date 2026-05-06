@@ -107,6 +107,10 @@ These rules govern how content appears on every slide. Violating them produces c
 - Rhetorical questions, strikethroughs for comedic effect, single-word reveals — these are your tools.
 - The title alone should make someone curious. "What Do You Call Software That..." beats "OpenClaw Architecture Overview."
 
+#### Titles must carry context for latecomers
+- Someone glancing at the slide mid-talk should immediately understand the topic. A generic title like "Same Playbook" means nothing on its own — "Same npm Malware Playbook" anchors the audience to the subject even if they just looked up from their phone.
+- Every title should answer: "If someone walked in right now, would this title tell them what we're discussing?"
+
 #### Let the speaker talk
 - The slide provides the visual anchor. The presenter notes provide the full narrative.
 - If you find yourself writing a paragraph on a slide, move 80% of it to presenter notes and leave only the hook on the slide.

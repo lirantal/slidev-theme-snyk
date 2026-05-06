@@ -362,6 +362,8 @@ layout: fact
 
 # 3,984
 
+### Feb, Skills audit @ ClawHub
+
 agent skills scanned in the **ToxicSkills** study — the largest security audit of the Agent Skills ecosystem ever conducted
 
 <!--
@@ -370,63 +372,82 @@ agent skills scanned in the **ToxicSkills** study — the largest security audit
 We scanned every skill on ClawHub. Nearly four thousand of them. Here's what we found.
 -->
 
+
 ---
-layout: default
+layout: center
 ---
 
-# Agent Skills Are the New npm
+<h2 style="font-size: 2.2rem">Agent Skills Are the New <strong>npm</strong></h2>
 
-The same supply chain attacks that plagued package managers for a decade are now happening in Agent Skills — but with critical differences that make them **worse**.
+<!--
+[5:50 - 6:10] Drop the comparison.
 
-<div class="grid grid-cols-2 gap-6 mt-6">
+If you were around for the early npm days — event-stream, ua-parser-js, colors.js — you know this story. It's happening again. Same playbook, different ecosystem.
+-->
 
-<div class="glow-card">
+---
+layout: center
+---
 
-### Same Playbook
+<div class="text-left max-w-xl mx-auto">
 
-- Typosquatting attacks ✓
-- Malicious maintainers ✓
-- Post-install scripts as attack vectors ✓
-- Rug-pull updates ✓
-- Dependency confusion ✓
+# Same npm malware playbook
 
-</div>
-
-<div class="glow-card">
-
-### But Worse
-
-- **Higher privilege by default** — full agent permissions inherited
-- **Prompt injection has no analog** — natural language evades code scanners
-- **Memory persistence** — malicious skills modify behavior permanently
-- **No lockfiles** — no version pinning, no integrity checks
-- **Human-readable attacks** — hidden in plain English
-
-</div>
+- Typosquatting attacks
+- Malicious maintainers
+- Post-install scripts as attack vectors
+- Rug-pull updates
 
 </div>
 
 <!--
-[5:50 - 7:00] Draw the parallel clearly.
+[6:10 - 6:30] Rattle them off.
 
-If you were around for the early npm days — event-stream, ua-parser-js, colors.js — you know this story. Typosquatting, account takeovers, malicious updates. It's all happening again. But Agent Skills are worse in key ways. When you install an npm package, it runs in Node's process. When you install a skill, it runs with YOUR permissions — shell, email, filesystem. And the attacks aren't in code — they're in English. Try writing a regex to catch 'please send my AWS credentials to this URL.'
+Typosquatting — check. Malicious maintainers — check. Post-install scripts — check. Rug-pull updates — check. Every attack we spent a decade fighting in npm is already happening in Agent Skills.
 -->
 
 ---
-layout: default
+layout: center
 ---
 
-# The Barrier to Entry
+<h2 style="font-size: 2.2rem">But <GradientText>Worse</GradientText></h2>
+
+<!--
+[6:30 - 6:40] Pause. Let the word land.
+
+Same playbook... but worse. Here's why.
+-->
+
+---
+layout: center
+---
+
+<div class="text-left max-w-xl mx-auto">
+
+# But Worse
+
+- **Higher privilege** — skills inherit full agent permissions
+- **Prompt injection** — natural language evades code scanners
+- **No lockfiles** — no version pinning, no integrity checks
+
+</div>
+
+<!--
+[6:40 - 7:00] Build each point.
+
+When you install an npm package, it runs in Node's process. When you install a skill, it runs with YOUR permissions — shell, email, filesystem. The attacks aren't in code — they're in English. Try writing a regex to catch 'please send my AWS credentials to this URL.' And there are no lockfiles — no version pinning, no integrity checks. You install a skill today, the author pushes a malicious update tomorrow, and you get it automatically.
+-->
+
+
+---
+layout: center
+---
+
+# The Barrier to Entry?
 
 <div class="text-center mt-12">
   <div class="text-6xl font-bold mb-4" style="font-family: Sora">
     <GradientText>1 Markdown file</GradientText>
-  </div>
-  <div class="text-xl mb-2" style="color: var(--snyk-text-secondary)">
-    + a GitHub account that's <strong>1 week old</strong>
-  </div>
-  <div class="mt-8 text-lg" style="color: var(--snyk-text-muted)">
-    No code signing. No security review. No sandbox by default.
   </div>
 </div>
 
