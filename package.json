@@ -10,6 +10,7 @@
     "node": ">=20.12.0"
   },
   "scripts": {
+    "slides:agent-scan": "slidev talk-agent-scan-and-malicious-skills --theme ./",
     "build": "slidev build example.md",
     "dev": "slidev example.md --open",
     "export": "slidev export example.md",
