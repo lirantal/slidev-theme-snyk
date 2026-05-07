@@ -469,26 +469,29 @@ layout: default
 
 # Explosive Growth, Zero Security
 
-ClawHub skills submissions went from **50 per day** to **500+ per day** in just weeks — a 10x increase that attracted malicious actors at scale.
+ClawHub skills submissions went from **50 per day** to **500+ per day**
 
-<div class="mt-6">
+<div class="mt-24">
   <BarChart
     :data="[
       { label: 'Mid-January 2026', value: 50, color: '#00D4AA' },
       { label: 'Late January', value: 150, color: '#00D4AA' },
       { label: 'Early February', value: 350, color: '#fbbf24' },
-      { label: 'Feb 5 (ToxicSkills scan)', value: 500, color: '#f87171' },
+      { label: 'Feb 5 (ToxicSkills)', value: 500, color: '#f87171' },
     ]"
     :max-value="600"
   />
 </div>
 
-<div class="mt-4 text-sm" style="color: var(--snyk-text-muted)">
-  Daily skill submissions to ClawHub marketplace. The ClawHavoc malware campaign launched during the Jan 27-29 spike.
+<div class="mt-4 text-xs" style="color: var(--snyk-text-muted)">
+  Daily skill submissions to ClawHub marketplace.
+  The ClawHavoc malware campaign launched during the Jan 27-29 spike.
 </div>
 
 <!--
 [7:30 - 8:00] Growth context.
+
+10x increase in several weeks, attractive for malicious actors 
 
 This is the growth curve. In three weeks, submissions went 10x. And right in that spike window — January 27 to 29 — the first major malware campaign hit. 341 malicious skills in 48 hours. They called it ClawHavoc.
 -->

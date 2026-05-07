@@ -98,6 +98,24 @@ Some **markdown** text
 <h2 style="font-size: 2.5rem">Some <strong>markdown</strong> text</h2>
 ```
 
+### Vertical spacing in slide content
+
+Content on `default` layout slides tends to cluster at the top, leaving the bottom half empty. Use generous top margins (e.g. `mt-16`, `mt-24`) on the main content block to push it toward the vertical center of the slide. This distributes the visual weight and avoids the "cramped header, empty footer" look.
+
+```md
+<!-- BAD: content hugs the title -->
+# Explosive Growth
+<div class="mt-4">
+  <BarChart ... />
+</div>
+
+<!-- GOOD: content breathes, visually centered -->
+# Explosive Growth
+<div class="mt-24">
+  <BarChart ... />
+</div>
+```
+
 ### Testing layout changes
 
 After any change to a layout `.vue` file, **always verify** it still renders:
