@@ -430,10 +430,12 @@
 .snyk-badge {
   display: inline-flex;
   align-items: center;
-  padding: 0.2em 0.7em;
+  justify-content: center;
+  padding: 0.35em 0.75em;
   border-radius: 9999px;
   font-size: 0.75rem;
   font-weight: 600;
+  line-height: 1;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
