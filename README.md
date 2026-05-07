@@ -202,11 +202,13 @@ Colored tag/label.
 <Badge>Default</Badge>
 <Badge variant="teal">Beta</Badge>
 <Badge variant="danger">Critical</Badge>
+<Badge variant="success">Passed</Badge>
+<Badge variant="info">Note</Badge>
 ```
 
 | Prop | Type | Default |
 |------|------|---------|
-| `variant` | `'primary' \| 'teal' \| 'danger' \| 'blue'` | `'primary'` |
+| `variant` | `'primary' \| 'teal' \| 'danger' \| 'blue' \| 'success' \| 'info'` | `'primary'` |
 
 ### GradientText
 
