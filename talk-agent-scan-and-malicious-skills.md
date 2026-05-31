@@ -121,6 +121,99 @@ This is a SKILL.md. YAML frontmatter at the top — name, description. Then Mark
 layout: default
 ---
 
+# What's in a Skill?
+
+<div class="mt-5 grid gap-5 items-stretch" style="grid-template-columns: minmax(0, 1.18fr) minmax(0, 0.82fr)">
+  <div class="glow-card" style="padding: 1rem 1.25rem">
+    <div class="skill-file-tree">
+      <div class="skill-tree-entry">weather-agent-skill/</div>
+      <div><span class="skill-tree-entry">├──</span> <strong class="skill-tree-entry skill-tree-highlight skill-tree-highlight-skill" :class="{ 'is-active': $clicks === 0 }">SKILL.md</strong> <span class="skill-tree-entry"># entrypoint</span></div>
+      <div class="skill-tree-entry">├── assets/</div>
+      <div class="skill-tree-entry">│   ├── diagram.png</div>
+      <div class="skill-tree-entry">│   └── onboarding.txt</div>
+      <div class="skill-tree-entry">├── references/</div>
+      <div><span class="skill-tree-entry">│   ├──</span> <strong class="skill-tree-entry skill-tree-highlight skill-tree-highlight-api" :class="{ 'is-active': $clicks === 1 }">api.md</strong></div>
+      <div class="skill-tree-entry">│   └── troubleshooting.md</div>
+      <div class="skill-tree-entry">├── scripts/</div>
+      <div><span class="skill-tree-entry">│   └──</span> <strong class="skill-tree-entry skill-tree-highlight skill-tree-highlight-install" :class="{ 'is-active': $clicks === 2 }">install.sh</strong></div>
+      <div class="skill-tree-entry">└── package.json</div>
+    </div>
+  </div>
+  <div class="glow-card" style="padding: 0; overflow: hidden; min-height: 21rem">
+    <div style="display: flex; gap: 0.45rem; align-items: center; padding: 0.7rem 0.9rem; border-bottom: 1px solid var(--snyk-border); background: var(--snyk-bg-surface)">
+      <span style="width: 0.65rem; height: 0.65rem; border-radius: 999px; background: #ff5f57"></span>
+      <span style="width: 0.65rem; height: 0.65rem; border-radius: 999px; background: #ffbd2e"></span>
+      <span style="width: 0.65rem; height: 0.65rem; border-radius: 999px; background: #28c840"></span>
+    </div>
+    <div style="position: relative; min-height: 18.2rem">
+      <div v-click="[0,0]" style="position: absolute; inset: 0">
+        <div style="padding: 0.65rem 0.9rem; color: var(--snyk-text-muted); font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; border-bottom: 1px solid var(--snyk-border)">SKILL.md</div>
+        <pre style="margin: 0; border: 0; border-radius: 0; height: calc(100% - 2.45rem); overflow: hidden; padding: 0.9rem !important; font-size: 0.68rem; line-height: 1.5">{{ '---\nname: weather-agent\ndescription: Use this when the user asks about weather APIs.\n---\n\n# Weather Agent\n\nRead references/api.md before calling the API.\nIf setup is missing, run scripts/install.sh first.' }}</pre>
+      </div>
+      <div v-click="[1,1]" style="position: absolute; inset: 0">
+        <div style="padding: 0.65rem 0.9rem; color: var(--snyk-text-muted); font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; border-bottom: 1px solid var(--snyk-border)">references/api.md</div>
+        <pre style="margin: 0; border: 0; border-radius: 0; height: calc(100% - 2.45rem); overflow: hidden; padding: 0.9rem !important; font-size: 0.68rem; line-height: 1.5">{{ '# API Notes\n\nUse WEATHER_API_KEY from the local environment.\nCache responses in .agent-cache/weather.json.\n\nFor setup details, follow scripts/install.sh.' }}</pre>
+      </div>
+      <div v-click="[2,2]" style="position: absolute; inset: 0">
+        <div style="padding: 0.65rem 0.9rem; color: var(--snyk-text-muted); font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; border-bottom: 1px solid var(--snyk-border)">scripts/install.sh</div>
+        <pre style="margin: 0; border: 0; border-radius: 0; height: calc(100% - 2.45rem); overflow: hidden; padding: 0.9rem !important; font-size: 0.68rem; line-height: 1.5">{{ '#!/usr/bin/env bash\nset -euo pipefail\n\n# Demo payload placeholder.\n# Replace this with the example you want to reveal live.\n\necho "Weather helper installed"' }}</pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mt-3 text-sm" style="color: var(--snyk-text-muted)">
+The review target is the whole directory: instructions, references, assets, scripts, and dependencies.
+</div>
+
+<style>
+.slidev-layout .skill-file-tree {
+  color: var(--snyk-text-muted);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1rem;
+  line-height: 1.62;
+}
+
+.slidev-layout .skill-file-tree .skill-tree-entry {
+  color: var(--snyk-text-muted);
+}
+
+.slidev-layout .skill-file-tree .skill-tree-highlight {
+  transition: color 180ms ease, text-shadow 180ms ease;
+}
+
+.slidev-layout .skill-file-tree .skill-tree-highlight.is-active {
+  font-weight: 800;
+}
+
+.slidev-layout .skill-file-tree .skill-tree-highlight-skill.is-active {
+  color: var(--snyk-primary-light);
+  text-shadow: 0 0 18px rgba(88, 166, 255, 0.34);
+}
+
+.slidev-layout .skill-file-tree .skill-tree-highlight-api.is-active {
+  color: var(--snyk-glow-blue);
+  text-shadow: 0 0 18px rgba(0, 213, 255, 0.32);
+}
+
+.slidev-layout .skill-file-tree .skill-tree-highlight-install.is-active {
+  color: var(--snyk-action-secondary);
+  text-shadow: 0 0 18px rgba(255, 112, 67, 0.32);
+}
+</style>
+
+<!--
+[2:30 - 3:00] Expand the mental model.
+
+The previous slide made SKILL.md look like a single Markdown document. That's the entrypoint, but real skills often look more like npm packages: directories of references, assets, helper scripts, and dependency metadata.
+
+Step through the viewer: first the SKILL.md tells the agent to read a reference file and run setup. Then the reference expands the instruction surface. Then the script panel makes the point that bundled executable code can carry the real behavior. This is why reviewing one Markdown file is not enough.
+-->
+
+---
+layout: default
+---
+
 # We Were Robbed of Skill Security
 
 <div class="mt-6">
@@ -135,7 +228,7 @@ layout: default
 <!--
 [2:00 - 2:30] Raise questions.
 
-Highlight collective complacency. Most users install skills without reading. There’s no sandbox — everything runs with full agent permissions. Where's the security process?
+Most users install skills without reading. There’s no sandbox — everything runs with full agent permissions. Where's the security process?
 
 Before you blame the registry, check your own habits: Are you reviewing skills before hitting install? Is your agent running with fewer privileges? Or is it simply "trust and hope nothing bad happens"?
 -->
