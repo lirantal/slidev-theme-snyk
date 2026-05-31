@@ -31,7 +31,11 @@ themeConfig:
 <!--
 [0:00 - 0:30] Opening. Let the title land. Pause. Make eye contact.
 
-Raise your hand if you've installed a skill or MCP server for your coding agent in the last month. Keep it raised if you reviewed the SKILL.md before installing. Yeah, that's what I thought.
+Raise your hand if you've installed a skill or MCP server for your coding agent in the last month.
+
+Keep it raised if you reviewed the SKILL.md before installing.
+
+Yeah, that's what I thought.
 -->
 
 ---
@@ -57,12 +61,21 @@ layout: fact
 
 # 13.4%
 
-of all agent skills contain at least one **critical-level security issue** — malware, prompt injection, or exposed secrets
+of all agent skills contain at least one **critical-level security issue**
 
 <!--
 [1:00 - 1:30] Let the number breathe.
 
-We scanned nearly 4,000 agent skills. 1 in 7 had a critical security flaw. Not a style issue. Not a warning. Critical — as in malware distribution, credential theft, prompt injection.
+We scanned nearly 4,000 agent skills.
+
+1 in 7 had a critical security flaw.
+
+Not a style issue. Not a warning.
+
+Critical — as in:
+  - malware distribution
+  - credential theft
+  - prompt injection.
 -->
 
 ---
@@ -112,8 +125,8 @@ layout: default
 
 <div class="mt-6">
 
-- Everyone runs in <strong>auto-mode</strong> (and <span style="color: var(--snyk-primary)">--yolo</span>)
 - <em>Do you even read skills text before you install them?</em>
+- Agents commonly run in <strong>auto-mode</strong> (and <span style="color: var(--snyk-primary)">--yolo</span>)
 - Where is the agent <strong>sandbox</strong>?
 - Who checks what a skill <em>actually</em> does?
 
@@ -144,7 +157,11 @@ Read them before enabling.
 <!--
 [2:30 - 3:00] Deadpan delivery.
 
-This is the entire security model. 'Read them before enabling.' That's it. No signing. No sandboxing. No review process. Just... trust. Sound familiar? It should — this is exactly where npm was in 2015.
+I present to you the entirety of Agent Skills security model: 'Read them before enabling.'
+
+That's it. No signing. No sandboxing. No review process. Just... trust.
+
+Sound familiar? It should — this is exactly where npm was in 2015.
 -->
 
 ---
@@ -156,7 +173,7 @@ layout: section
 <!--
 [3:00 - 3:10] Section transition.
 
-To understand why this matters, let's talk about what these agents actually are.
+To understand why this matters, let's talk about some types of AI agents.
 -->
 
 ---
@@ -175,7 +192,15 @@ layout: default
 <!--
 [3:10 - 3:50] Build tension. Pause between each click.
 
-What do you call software that accepts instructions via Telegram... has full shell access... reads your emails... controls your browser... and installs third-party plugins to extend itself? Sounds like something you'd find in a threat intel report, right?
+What do you call software that
+  - accepts instructions via Telegram...
+  - has full shell access...
+  - reads your emails...
+  - controls your browser...
+  - and... installs third-party plugins to extend itself?
+  
+  
+Sounds like something you'd find in a threat intel report, right?
 -->
 
 ---
@@ -187,7 +212,9 @@ layout: center
 <!--
 [3:50 - 4:20] The reveal. Let it land.
 
-A trojan? No — it's OpenClaw. Formerly Clawdbot. It's a legitimate, popular, open-source AI assistant. People love it. But look at those capabilities we just listed — every single one of them is a feature, not a bug. And every single one is an attack surface.
+A trojan? No — it's OpenClaw. Formerly Clawdbot. It's a legitimate, popular, open-source AI assistant. People love it.
+
+But look at those capabilities we just listed — every single one of them is a feature, not a bug. And every single one is an attack surface.
 -->
 
 ---
@@ -247,7 +274,11 @@ layout: center
 <!--
 [4:40 - 4:50] Drop the term.
 
-Simon Willison coined this term — the lethal trifecta. Three capabilities that, when combined, make AI agents a category-defining security risk. Snyk's research team calls the resulting exploit chains 'toxic flows.'
+Simon Willison coined this term — the lethal trifecta.
+
+Three capabilities that, when combined, make AI agents a category-defining security risk.
+
+Snyk's research team calls the resulting exploit chains 'toxic flows.'
 -->
 
 ---
@@ -278,7 +309,13 @@ layout: center
 <!--
 [4:50 - 5:10] Overview of the three.
 
-Three capabilities. Any two are concerning. All three together? That's an exfiltration machine waiting to be activated. Let's look at each one.
+Three capabilities.
+
+Any two are concerning.
+
+All three together? That's an exfiltration machine waiting to be activated.
+
+Let's look at each one.
 -->
 
 ---
@@ -352,7 +389,15 @@ layout: center
 <!--
 [5:30 - 5:50] Let it sink in.
 
-And it gets worse. These agents remember things across sessions. A compromised skill can plant instructions in memory that fire days later. Add shell access and you have a persistent insider threat — autonomous, patient, and invisible to traditional security tools. This is what we documented in the ToxicSkills research.
+And it gets worse.
+
+These agents remember things across sessions.
+
+A compromised skill can plant instructions in memory that fire days later.
+
+Add shell access and you have a persistent insider threat — autonomous, patient, and invisible to traditional security tools.
+
+This is what we documented in the ToxicSkills research.
 -->
 
 
@@ -383,6 +428,10 @@ layout: center
 [5:50 - 6:10] Drop the comparison.
 
 If you were around for the early npm days — event-stream, ua-parser-js, colors.js — you know this story. It's happening again. Same playbook, different ecosystem.
+
+Skills are the new AI building blocks.
+
+They're the re-usable, sharable, AI components.
 -->
 
 ---
@@ -435,7 +484,11 @@ layout: center
 <!--
 [6:40 - 7:00] Build each point.
 
-When you install an npm package, it runs in Node's process. When you install a skill, it runs with YOUR permissions — shell, email, filesystem. The attacks aren't in code — they're in English. Try writing a regex to catch 'please send my AWS credentials to this URL.' And there are no lockfiles — no version pinning, no integrity checks. You install a skill today, the author pushes a malicious update tomorrow, and you get it automatically.
+When you install an npm package, it runs in Node's process. When you install a skill, it runs with YOUR permissions — shell, email, filesystem.
+
+The attacks aren't in code — they're in English. Try writing a regex to catch __please send my AWS credentials to this URL.__
+
+And there are no lockfiles — no version pinning, no integrity checks. You install a skill today, the author pushes a malicious update tomorrow, and you get it automatically.
 -->
 
 
@@ -514,9 +567,9 @@ layout: default
 
 # The Bait
 
-Your OpenClaw agent is connected to your email.
+Step 1: Connect OpenClaw agent to your email.
 
-Helpful but dangerous.
+Step 2: Cry.
 
 <div class="mt-4">
 
@@ -619,7 +672,7 @@ layout: center
 <!--
 [10:15 - 10:45] Build the case.
 
-So someone in the audience is thinking: 'but the agent asked for permission before replying!' Surely human-in-the-loop saves us, right?
+Is it realistic to add humans in the loop for all of these agentic interactions?
 
 Human-in-the-loop is a UX feature, not a security control. The same social engineering that makes phishing emails work makes agent approval prompts exploitable. You're busy, you see a quick confirmation dialog, you hit approve. The attack surface shifted from 'click this link' to 'approve this agent action.' Same attack, new surface.
 -->
@@ -722,7 +775,12 @@ See that? 'Visit this link, copy the command and run it in terminal.' The agent 
 layout: center
 ---
 
-<Badge variant="danger">The "openclaw-core" utility does not exist. It's malware.</Badge>
+<Badge
+  variant="danger"
+  style="font-size: 1.55rem; padding: 0.65em 1.1em; border-width: 2px; box-shadow: 0 0 36px rgba(239, 68, 68, 0.28);"
+>
+  The "openclaw-core" utility does not exist. It's malware.
+</Badge>
 
 <!--
 [11:40 - 12:00] Mic drop. Pause.
@@ -1507,7 +1565,7 @@ Snyk Agent Scan v0.5.1
 <!--
 [25:30 - 27:00] Show the tool.
 
-This is what detection should look like. mcp-scan — it's open source, free to use. It doesn't grep for keywords. It uses specialized models trained on real threat data to understand the BEHAVIOR of a skill. Look at this output: it identified the obfuscated base64, understood it decodes to a curl|bash, recognized the password-protected ZIP as an evasion technique. It understood INTENT. And in our benchmarks: 90 to 100 percent recall on confirmed malicious skills, zero false positives on legitimate ones.
+This is what detection should look like. agent-scan — it's open source, free to use. It doesn't grep for keywords. It uses specialized models trained on real threat data to understand the BEHAVIOR of a skill. Look at this output: it identified the obfuscated base64, understood it decodes to a curl|bash, recognized the password-protected ZIP as an evasion technique. It understood INTENT. And in our benchmarks: 90 to 100 percent recall on confirmed malicious skills, zero false positives on legitimate ones.
 -->
 
 ---
@@ -1565,7 +1623,7 @@ Hint: Snyk AI-SPM
 
 If it's manual, it's outdated.
 
-Do we even know what skills are installed? If the answer is 'we'll check manually' — it's already outdated. Run mcp-scan, run snyk aibom. Get the inventory.
+Do we even know what skills are installed? If the answer is 'we'll check manually' — it's already outdated. Run agent-scan, run snyk aibom. Get the inventory.
 -->
 
 ---
