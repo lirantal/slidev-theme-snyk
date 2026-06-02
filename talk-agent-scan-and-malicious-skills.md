@@ -1292,7 +1292,7 @@ layout: default
 
 <div class="mt-6 glow-card" style="padding: 0.25rem; overflow: hidden">
   <img
-    :src="'/vercel-bad-skill-step-2.png'"
+    :src="'/vercel-bad-skill-step-2-highlighted.png'"
     alt=""
     style="display: block; width: 100%; max-height: 24rem; object-fit: contain; border-radius: 0.9rem"
   />
