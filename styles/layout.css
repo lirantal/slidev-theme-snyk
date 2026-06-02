@@ -19,6 +19,8 @@
   --snyk-glow: rgba(255, 15, 243, 0.1);
 
   --slidev-theme-primary: var(--snyk-primary);
+  --slidev-code-font-size: 15px;
+  --slidev-code-line-height: 22.5px;
 }
 
 /* Hide Slidev's built-in presentation controls; keyboard shortcuts still work. */
