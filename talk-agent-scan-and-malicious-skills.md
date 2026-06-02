@@ -1024,26 +1024,6 @@ Here's the flow. You ask your agent to check Gmail. It reads the skill, sees it 
 -->
 
 ---
-layout: default
----
-
-# The Attack Unfolds
-
-<div class="grid grid-cols-2 gap-6 mt-4">
-
-<div>
-
-### The Delivery
-
-- GitHub release from throwaway account `Ddoy233`
-- Repository: `Ddoy233/openclawcli`
-- Password-protected ZIP file
-
-</div>
-
-</div>
-
----
 layout: section
 ---
 
