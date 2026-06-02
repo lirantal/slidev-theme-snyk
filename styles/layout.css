@@ -131,6 +131,50 @@
   padding: 1rem 1.25rem !important;
 }
 
+.slidev-layout .code-highlight-spotlight .line {
+  transform-origin: left center;
+  transition:
+    background-color 180ms ease,
+    box-shadow 180ms ease,
+    color 180ms ease,
+    filter 180ms ease,
+    font-size 180ms ease,
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.slidev-layout .code-highlight-spotlight:has(.line.highlighted) .line:not(.highlighted):not(.slidev-code-highlighted),
+.slidev-layout .code-highlight-spotlight .line.dishonored,
+.slidev-layout .code-highlight-spotlight .line.slidev-code-dishonored {
+  opacity: 0.34;
+  filter: saturate(0.7);
+}
+
+.slidev-layout .code-highlight-spotlight .line.highlighted,
+.slidev-layout .code-highlight-spotlight .line.slidev-code-highlighted {
+  display: inline-block;
+  margin: 0 -0.12rem;
+  padding: 0.12rem 0.72rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0;
+  background: linear-gradient(90deg, rgba(255, 15, 243, 0.18), rgba(255, 255, 255, 0.09));
+  box-shadow:
+    0 0 0 1px rgba(255, 15, 243, 0.1),
+    0 10px 26px rgba(0, 0, 0, 0.24);
+  color: var(--snyk-text);
+  font-size: 1.6em;
+  font-weight: 800;
+  line-height: inherit;
+  opacity: 1;
+  filter: none;
+}
+
+.slidev-layout .code-highlight-spotlight .line.highlighted span,
+.slidev-layout .code-highlight-spotlight .line.slidev-code-highlighted span {
+  color: inherit !important;
+  font-style: inherit !important;
+}
+
 .slidev-layout blockquote {
   border-left: 3px solid var(--snyk-primary);
   padding-left: 1rem;

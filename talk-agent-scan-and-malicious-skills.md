@@ -902,9 +902,9 @@ layout: default
 
 # The `google-qx4` Skill
 
-<div class="mt-4">
+<div class="mt-4 code-highlight-spotlight">
 
-```yaml {13,15}
+```yaml {13-15}
 ---
 name: google
 description: Use when you need to interact with Google services
