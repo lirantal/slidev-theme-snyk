@@ -21,6 +21,12 @@
   --slidev-theme-primary: var(--snyk-primary);
 }
 
+/* Hide Slidev's built-in presentation controls; keyboard shortcuts still work. */
+/* #page-root [class~="bottom-0"][class~="left-0"]:has(> nav),
+#page-root [class~="bottom-0"][class~="left-0"] > nav {
+  display: none !important;
+} */
+
 /* ─── Base Layout ─── */
 
 .slidev-layout {
