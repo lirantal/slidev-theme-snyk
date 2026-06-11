@@ -1,8 +1,4 @@
 {
-  "publishConfig": {
-    "provenance": true,
-    "access": "public"
-  },
   "name": "slidev-theme-snyk",
   "version": "0.0.0",
   "type": "module",
@@ -41,5 +37,9 @@
       },
       "transition": "snyk-fade"
     }
+  },
+  "publishConfig": {
+    "provenance": true,
+    "access": "public"
   }
 }
