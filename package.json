@@ -7,7 +7,8 @@
     "slidev"
   ],
   "engines": {
-    "node": ">=20.12.0"
+    "npm": ">=11.10.0",
+    "node": ">=24.0.0"
   },
   "scripts": {
     "slides:agent-scan": "slidev talk-agent-scan-and-malicious-skills --theme ./",
