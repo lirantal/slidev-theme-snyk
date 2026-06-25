@@ -11,10 +11,10 @@
     "node": ">=24.0.0"
   },
   "scripts": {
-    "slides:agent-scan": "slidev talk-agent-scan-and-malicious-skills --theme ./",
+    "slides:agent-scan": "slidev talk-agent-scan-and-malicious-skills --theme ./ --host 0.0.0.0",
     "preview:agent-scan": "slidev build talk-agent-scan-and-malicious-skills.md --theme ./ && vite preview --outDir dist --host 0.0.0.0 --port 3031 --strictPort",
     "build": "slidev build example.md",
-    "dev": "slidev example.md --open",
+    "dev": "slidev example.md --host 0.0.0.0 --open",
     "export": "slidev export example.md",
     "screenshot": "slidev export example.md --format png"
   },
