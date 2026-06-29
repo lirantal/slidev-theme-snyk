@@ -387,6 +387,8 @@ The theme expects two logo files in `public/`:
 - `snyk-logo-dark.png` — logo for dark backgrounds
 - `snyk-logo-light.png` — logo for light backgrounds
 
+It also ships `favicon.png`, sourced from `https://snyk.io/favicon.png`, and configures it as the default browser favicon.
+
 ## Contributing
 
 ```bash
