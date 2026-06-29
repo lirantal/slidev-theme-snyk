@@ -18,7 +18,7 @@ fonts:
   mono: JetBrains Mono
 defaults:
   transition: snyk-fade
-conference: AI DevCon 2026
+conference: GenAI Israel
 layout: cover
 coverTitleScale: 95
 themeConfig:
@@ -43,26 +43,20 @@ Yeah, that's what I thought.
 -->
 
 ---
-layout: intro
-avatar: https://github.com/lirantal.png
+layout: fact
 ---
 
-# Liran Tal
+# ClawHub:
 
-**Developer Advocate & Security Researcher at Snyk**
-
-Author of supply chain security research on AI agent ecosystems. Previously disclosed malicious campaigns in npm, and now tracking the same patterns in Agent Skills.
+## ~4000 OpenClaw Skills
 
 <!--
-[0:30 - 1:00] Brief intro. Don't linger.
+✋ Raise your hand if you've
 
-I'm Liran, I do security research at Snyk.
+1. Installed a skill for your coding agent
+2. Keep it raised if you reviewed the SKILL.md before installing.
 
-I've spent the last few months hunting malware in AI agent skill ecosystems.
-
-Today I'm going to show you what I found
- 
-  — and it's not pretty.
+Yeah, that's what I thought...
 
 -->
 
@@ -72,7 +66,11 @@ layout: fact
 
 # 13.4%
 
-of all agent skills contain at least one **critical-level security issue**
+**critical-level security issue**
+<br/>
+of all agent skills on ClawHub
+
+<footnote> February 2026, ToxicSkills research </footnote>
 
 <!--
 [1:00 - 1:30] Let the number breathe.
@@ -88,6 +86,49 @@ Critical — as in:
   - credential theft
   - prompt injection.
 -->
+
+---
+layout: quote
+---
+
+but it's just a markdown file...
+
+<!--
+
+1. How do you handle the security of your Skills?
+
+-->
+
+---
+layout: section
+---
+
+# <GradientText>Live Hack</GradientText>
+
+---
+layout: intro
+avatar: https://github.com/lirantal.png
+---
+
+# Liran Tal
+
+**Developer Advocate & AI Security Researcher at Snyk**
+
+Secure coding advocate, building security tools for developers, open-source evangelist, teacher, and applied research on securing AI agent ecosystems.
+
+<!--
+[0:30 - 1:00] Brief intro. Don't linger.
+
+I'm Liran, I do security research at Snyk.
+
+I've spent the last few months hunting malware in AI agent skill ecosystems.
+
+Today I'm going to show you what I found
+ 
+  — and it's not pretty.
+
+-->
+
 
 ---
 layout: default
