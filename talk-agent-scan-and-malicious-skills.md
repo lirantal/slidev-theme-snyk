@@ -34,12 +34,6 @@ coverTitleScale: 95
 ---
 
 <!--
-✋ Raise your hand if you've installed a skill or MCP server for your coding agent in the last month.
-
-Keep it raised if you reviewed the SKILL.md before installing.
-
-Yeah, that's what I thought.
-
 -->
 
 ---
@@ -70,7 +64,12 @@ layout: fact
 <br/>
 of all agent skills on ClawHub
 
-<footnote> February 2026, ToxicSkills research </footnote>
+<footnote href="https://arxiv.org/abs/2605.28588">February 2026, ToxicSkills research</footnote>
+
+
+<!--
+  <footnote label="Source" align="right">https://snyk.io/labs/</footnote>
+-->
 
 <!--
 [1:00 - 1:30] Let the number breathe.
@@ -91,7 +90,7 @@ Critical — as in:
 layout: quote
 ---
 
-but it's just a markdown file...
+but it's just a Markdown file...
 
 <!--
 
@@ -103,12 +102,41 @@ but it's just a markdown file...
 layout: section
 ---
 
+# What to watch out for?
+
+- How much do you trust the Skills you install?
+- How much do you trust your Agent's reasoning?
+- How much autonomy do you give your Agent?
+
+---
+layout: section
+---
+
 # <GradientText>Live Hack</GradientText>
+
+
+---
+layout: section
+---
+
+# What just happened?
+
+- Human sees normal Markdown
+- Agent reads hidden instructions
+- Agent executes instructions
+
+<!--
+
+This was not a Gemini bug. This was not a Vercel bug.
+
+This was a trust boundary failure in agent skills.
+-->
 
 ---
 layout: intro
 avatar: https://github.com/lirantal.png
 ---
+
 
 # Liran Tal
 
