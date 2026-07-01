@@ -58,6 +58,14 @@ Yeah, that's what I thought...
 layout: fact
 ---
 
+<img
+  :src="'/toxicskills-research.png'"
+  alt="ToxicSkills research: 13.4% of all agent skills on ClawHub have critical security issues"
+  style="display: block; width: 70%; max-height: 18rem; 
+  align-self: center; margin: 0 auto;
+  object-fit: contain; border-radius: 0.9rem"
+/>
+
 # 13.4%
 
 **critical-level security issue**
