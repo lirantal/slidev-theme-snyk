@@ -11,12 +11,12 @@
     "node": ">=24.0.0"
   },
   "scripts": {
-    "slides:agent-scan": "slidev talk-agent-scan-and-malicious-skills --theme ./ --remote --bind 0.0.0.0",
-    "preview:agent-scan": "slidev build talk-agent-scan-and-malicious-skills.md --theme ./ && vite preview --outDir dist --host 0.0.0.0 --port 3031 --strictPort",
-    "build": "slidev build example.md",
-    "dev": "slidev example.md --remote --bind 0.0.0.0 --open",
-    "export": "slidev export example.md",
-    "screenshot": "slidev export example.md --format png"
+    "slides:agent-scan": "env -u VSCODE_CWD slidev talk-agent-scan-and-malicious-skills-v2 --theme ./ --remote --bind 0.0.0.0",
+    "preview:agent-scan": "env -u VSCODE_CWD slidev build talk-agent-scan-and-malicious-skills.md --theme ./ && vite preview --outDir dist --host 0.0.0.0 --port 3031 --strictPort",
+    "build": "env -u VSCODE_CWD slidev build example.md",
+    "dev": "env -u VSCODE_CWD slidev example.md --remote --bind 0.0.0.0 --open",
+    "export": "env -u VSCODE_CWD slidev export example.md",
+    "screenshot": "env -u VSCODE_CWD slidev export example.md --format png"
   },
   "dependencies": {
     "@slidev/types": "^52.14.2"
